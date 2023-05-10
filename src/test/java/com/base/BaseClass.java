@@ -422,6 +422,7 @@ return firstSelectedOption;
     	js.executeScript("arguments[0].scrollIntoView(true)",element);
     	
     }
+
     public void SelectByVisibleText(WebElement element,String text) {
 		Select s = new Select(element);
 		s.selectByVisibleText(text);
@@ -437,4 +438,12 @@ return firstSelectedOption;
     	elementClick(element4);
     }
     
+
+    public void selectingDate(WebElement element1,WebElement element2,WebElement element3) throws InterruptedException {
+    	 elementClick(element1);
+    	Thread.sleep(2000);
+    	 elementClick(element2);
+    	 elementClick(element3);
+    }
+
 }
