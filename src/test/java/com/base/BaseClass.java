@@ -422,5 +422,19 @@ return firstSelectedOption;
     	js.executeScript("arguments[0].scrollIntoView(true)",element);
     	
     }
-
+    public void SelectByVisibleText(WebElement element,String text) {
+		Select s = new Select(element);
+		s.selectByVisibleText(text);
+	}
+	
+    public void selectPreviousyearDate(WebElement element1,WebElement element2,WebElement element3,WebElement element4) throws InterruptedException {
+    	elementClick(element1);
+    	Thread.sleep(2000);
+    	elementClick(element2);
+    	Thread.sleep(2000);
+    	elementClick(element3);
+    	Thread.sleep(2000);
+    	elementClick(element4);
+    }
+    
 }
